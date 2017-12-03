@@ -1,0 +1,13 @@
+AddDefaultCharset utf-8
+
+#Options -Indexes
+
+#RewriteEngine On
+
+#RewriteBase /dynamique_3/phpt_tp2/
+
+#RewriteRule ^([a-z]+)/(titre|nom_auteur|annee)/(ASC|DESC)\/?$ /dynamique_3/phpt_tp2/index.php?controleur=$1&filtre=$2&ordre=$3&%{QUERY_STRING} [L]
+
+#RewriteRule ^([a-z]+)/([0-9]+)\/?$ /dynamique_3/phpt_tp2/index.php?controleur=$1&id=$2&%{QUERY_STRING} [L]
+
+#RewriteRule ^([a-z]+)\/?$ /dynamique_3/phpt_tp2/index.php?controleur=$1&%{QUERY_STRING} [L]
